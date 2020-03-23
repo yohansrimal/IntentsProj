@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/number3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/Number1"
+        app:layout_constraintEnd_toStartOf="@+id/calnum1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/number4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/Number2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calnum2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number3"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <EditText
+        android:id="@+id/calnum1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="@string/blank"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number3" />
+
+    <EditText
+        android:id="@+id/calnum2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        android:text="@string/blank"
+        app:layout_constraintBaseline_toBaselineOf="@+id/number4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number4" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blank"
+        app:layout_constraintBottom_toTopOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calnum2" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="76dp"
+        android:onClick="addition"
+        android:text="@string/addition"
+        app:layout_constraintBottom_toTopOf="@+id/multi"
+        app:layout_constraintEnd_toStartOf="@+id/sub"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="substraction"
+        android:text="@string/substraction"
+        app:layout_constraintBaseline_toBaselineOf="@+id/add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/add" />
+
+    <Button
+        android:id="@+id/multi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="188dp"
+        android:onClick="multiplication"
+        android:text="@string/multiplication"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/dev"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/dev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="devision"
+        android:text="@string/devision"
+        app:layout_constraintBaseline_toBaselineOf="@+id/multi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/multi" />
+</androidx.constraintlayout.widget.ConstraintLayout>
